@@ -1,0 +1,9 @@
+e900v22c
+M:	Krypton Lee <kryptonlee@outlook.com>
+S:	Maintained
+F:	arch/arm/dts/meson-g12a-s905l3a-e900v22c.dts
+F:	arch/arm/dts/meson-g12a-s905l3a-e900v22c-u-boot.dtsi
+F:	board/skyworth/e900v22c/
+F:	configs/e900v22c_defconfig
+F:	drivers/mmc/mmc.c
+F:	drivers/mmc/Kconfig
