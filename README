@@ -1,3 +1,11 @@
+To compile U-Boot for Skyworth E900V22C
+
+$ export CROSS_COMPILE=aarch64-none-elf-
+$ make e900v22c_defconfig
+$ make
+
+
+
 # SPDX-License-Identifier: GPL-2.0+
 #
 # (C) Copyright 2000 - 2013

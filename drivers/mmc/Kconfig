@@ -194,6 +194,13 @@ config SPL_MMC_HS200_SUPPORT
 	  The HS200 mode is support by some eMMC. The bus frequency is up to
 	  200MHz. This mode requires tuning the IO.
 
+config LIMIT_MMC_HS_SUPPURT
+	bool "limit to MMC_HS 26MHz mode"
+	help
+	  The eMMC of SKYWORTH E900V22C TV-Box has MMC_HS200 and MMC_HS_52
+	  modes in its caps, however it will lose control when the bus
+	  frequency is set to 52MHz or higher.
+
 config MMC_VERBOSE
 	bool "Output more information about the MMC"
 	default y

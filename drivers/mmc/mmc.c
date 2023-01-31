@@ -2144,6 +2144,11 @@ static int mmc_select_mode_and_width(struct mmc *mmc, uint card_caps)
 		for_each_supported_width(card_caps & mwt->widths,
 					 mmc_is_mode_ddr(mwt->mode), ecbw) {
 			enum mmc_voltage old_voltage;
+
+#if CONFIG_IS_ENABLED(LIMIT_MMC_HS_SUPPURT)
+			if (mmc_mode2freq(mmc, mwt->mode) > 26000000)
+				continue;
+#endif
 			pr_debug("trying mode %s width %d (at %d MHz)\n",
 				 mmc_mode_name(mwt->mode),
 				 bus_width(ecbw->cap),
